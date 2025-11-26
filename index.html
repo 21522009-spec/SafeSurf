@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <title>SafeSurf - An toàn Internet</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <header>
+        <div class="inner">
+            <div class="logo"><span>Safe</span>Surf</div>
+            <nav>
+                <a href="#home">Home</a>
+                <a href="#learn">Kiến thức</a>
+                <a href="#quiz">Quiz</a>
+                <a href="#scenario">Tình huống</a>
+            </nav>
+    </header>
+    <div class="page">
+        <main>
+            <section id="home" class="hero">
+                <div class="hero-text">
+                    <h1>An toàn trên Internet bắt đầu từ bạn</h1>
+                    <p>Nhận diện lừa đảo, bảo vệ tài khoản & dữ liệu cá nhân.</p>
+                    <button onclick="scrollToSection('learn')">Bắt đầu tìm hiểu</button>
+                    <button onclick="scrollToSection('quiz')">Làm quiz ngay</button>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/img/banner.png" alt="Internet Safety" />
+                </div>
+            </section>
+            <section id="learn" class="section">
+                <h2>Những chiêu lừa phổ biến</h2>
+                <div class="card-container">
+                    <article class="card">
+                        <h3>Phishing (Giả mạo đăng nhập)</h3>
+                        <img src="assets/img/phishing.png" alt="Phishing" />
+                        <p>Email / web giả mạo ngân hàng, mạng xã hội để lấy tài khoản của bạn.</p>
+                    </article>
+                    <article class="card">
+                        <h3>Lừa OTP / cuộc gọi giả mạo</h3>
+                        <img src="assets/img/otp_scam.png" alt="OTP Scam" />
+                        <p>Giả danh nhân viên ngân hàng, công an... dụ đọc mã OTP hoặc click link.</p>
+                    </article>
+                </div>
+
+                <div class="video-wrapper">
+                    <h3>Video: Những lưu ý quan trọng để tránh bị lừa đảo trên không gian mạng</h3>
+                    <video controls>
+                        <source src="assets/video/intro.mp4" type="video/mp4" />
+                        Trình duyệt của bạn không hỗ trợ video.
+                    </video>
+                </div>
+            </section>
+            <section id="quiz" class="section">
+                <h2>Quiz: Bạn có đủ tỉnh táo?</h2>
+                <div id="quiz-box">
+                    <div id="question-text"></div>
+                    <div id="answers"></div>
+                    <div id="quiz-status"></div>
+                    <button id="next-btn" disabled>Câu tiếp theo</button>
+                </div>
+            </section>
+            <section id="scenario" class="section">
+                <h2>Xử lý tình huống: Good choice or bad choice </h2>
+                <p id="scenario-text">
+                    Bạn nhận được email “ngân hàng” báo tài khoản sắp bị khóa, yêu cầu bấm vào link để xác minh...
+                </p>
+                <div class="scenario-options">
+                    <button onclick="chooseScenario(1)">Bấm vào link ngay để tránh bị khoá</button>
+                    <button onclick="chooseScenario(2)">Kiểm tra kỹ địa chỉ email & đăng nhập từ app chính thức</button>
+                </div>
+                <div id="scenario-result"></div>
+            </section>
+        </main>
+    </div>
+        <footer>
+            <p>Thái Đặng Duy - 21522009 - NT526.Q12</p>
+        </footer>
+
+        <script src="js/main.js"></script>
+</body>
+</html>
