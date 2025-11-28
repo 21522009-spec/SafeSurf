@@ -58,11 +58,11 @@ function handleAnswer(isCorrect, button) {
   if (isCorrect) {
     score++;
     button.classList.add("correct");
-    statusDiv.textContent = "Đúng! Bạn xử lý rất tỉnh táo.";
+    statusDiv.textContent = "That's right! Bạn xử lý rất tỉnh táo.";
   } else {
     button.classList.add("wrong");
     statusDiv.textContent =
-      "Sai rồi. Trong thực tế, bạn nên kiểm tra kỹ nguồn & không cung cấp thông tin.";
+      "Too bad. Nếu được, bạn nên kiểm tra kỹ nguồn & không cung cấp thông tin.";
   }
 
   nextBtn.disabled = false;
@@ -71,13 +71,13 @@ function handleAnswer(isCorrect, button) {
 nextBtn.addEventListener("click", () => {
   currentIndex++;
   if (currentIndex >= questions.length) {
-    questionText.textContent = `Hoàn thành! Bạn đúng ${score}/${questions.length} câu.`;
+    questionText.textContent = `Good job! Bạn làm đúng được ${score}/${questions.length} câu.`;
     answersDiv.innerHTML = "";
     nextBtn.disabled = true;
     statusDiv.textContent =
       score === questions.length
-        ? "Xuất sắc! Bạn đang rất tỉnh táo trên mạng."
-        : "Bạn nên xem lại phần kiến thức ở trên để tránh bị lừa nhé.";
+        ? "Good job, man. You are the GOAT."
+        : "Nice try, nếu có thể bạn xem lại nội dung để tránh bị lừa nhá.";
   } else {
     loadQuestion();
   }
@@ -91,7 +91,7 @@ function chooseScenario(option) {
   const result = document.getElementById("scenario-result");
   if (option === 1) {
     result.textContent =
-      "Bạn đã bấm vào link giả mạo → nguy cơ bị đánh cắp tài khoản! Lần sau hãy kiểm tra kỹ địa chỉ email & URL.";
+      "Bạn đã bị lừa bấm vào link giả mạo :(( → nguy cơ bị đánh cắp tài khoản! Lần sau hãy kiểm tra kỹ địa chỉ email & URL.";
   } else {
     result.textContent =
       "Tuyệt! Bạn đã chọn cách an toàn: kiểm tra kỹ & chỉ đăng nhập từ kênh chính thức.";
